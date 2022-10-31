@@ -18,7 +18,7 @@ public class PersonaController {
         this.ipersonaService = personaService;
     }
     
-    @GetMapping("/personastraer")
+    @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
