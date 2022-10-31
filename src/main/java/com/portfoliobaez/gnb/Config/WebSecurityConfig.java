@@ -25,7 +25,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/personas/traer",
                         "/personas/editar/**",
                         "/personas/traer/perfil",
-                        "/explad/create"
+                        "/explad/create",
+                        "/educacion/create"
                 ).hasAnyAuthority("ADMIN")
                 .antMatchers(HttpMethod.POST, "/auth/login")
                 .permitAll()
@@ -38,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring()
           .antMatchers("/v2/api-docs",
                   "/explab/lista",
+                  "/educacion/lista",
             "/configuration/ui",
             "/explab/update/**",
             "/swagger-resources/**",
