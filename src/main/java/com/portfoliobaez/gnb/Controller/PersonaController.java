@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin (origins = "https://frontendgnb.web.app")
+//@CrossOrigin (origins = "https://frontendgnb.web.app")
 public class PersonaController {
     
     private IPersonaService ipersonaService;

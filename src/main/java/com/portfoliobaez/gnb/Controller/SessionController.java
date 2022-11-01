@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin (origins = "https://frontendgnb.web.app")
+//@CrossOrigin (origins = "https://frontendgnb.web.app")
 public class SessionController {
     
     private final ISessionService service;
