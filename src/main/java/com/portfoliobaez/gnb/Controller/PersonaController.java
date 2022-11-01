@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@RequestMapping("/personas")
 //@CrossOrigin (origins = "https://frontendgnb.web.app")
 public class PersonaController {
     
@@ -18,22 +19,22 @@ public class PersonaController {
         this.ipersonaService = personaService;
     }
     
-    @GetMapping("/personas/traer")
+    @GetMapping("/lista")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
-    @PostMapping("/personas/crear")
+    @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
     }
-    @DeleteMapping("/personas/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         ipersonaService.deletePersona(id);
         return "La persona fue eliminada";
     }
     
-    @PutMapping("/personas/editar/{id}")
+    @PutMapping("/editar/{id}")
     public Persona editPersona (@PathVariable Long id,
                                 @RequestParam("nombre") String nuevoNombre,
                                 @RequestParam("apellido") String nuevoApellido){
@@ -46,7 +47,7 @@ public class PersonaController {
         return persona;        
     }
     
-    @GetMapping("/personastraer/perfil")
+    @GetMapping("/lista/perfil")
     public Persona findPersona(){
         return ipersonaService.findPersona(2L);
     }

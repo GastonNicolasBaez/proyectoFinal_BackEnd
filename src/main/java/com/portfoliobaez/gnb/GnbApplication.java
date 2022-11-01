@@ -18,7 +18,7 @@ public class GnbApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/*").allowedOrigins("https://frontendgnb.web.app").allowedMethods("*").allowedHeaders("*");
+                registry.addMapping("/*").allowedOrigins("/**").allowedMethods("*").allowedHeaders("*");
             }
         };
     }

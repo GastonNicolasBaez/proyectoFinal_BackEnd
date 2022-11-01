@@ -22,9 +22,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                         "/personas/crear",
                         "/personas/borrar/**",
-                        "/personas/traer",
+                        "/personas/lista",
                         "/personas/editar/**",
-                        "/personas/traer/perfil",
+                        "/personas/lista/perfil",
                         "/explad/create",
                         "/educacion/create"
                 ).hasAnyAuthority("ADMIN")
@@ -38,7 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure ( WebSecurity web ) throws Exception {
         web.ignoring()
           .antMatchers("/v2/api-docs",
-                  "/explab/lista",
+                  "/experiencia/lista",
                   "/educacion/lista",
             "/configuration/ui",
             "/explab/update/**",
